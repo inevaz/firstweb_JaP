@@ -1,0 +1,169 @@
+/* cuerpo, titulos, parrafos y eso "reseteados" */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* fuente de google Marcellus para el h1 */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus:wght=400&display=swap');
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal del texto del resto de la pagina */
+    background-color: #000000; /* Color de fondo del cuerpo */
+    padding: 0;
+}
+
+/* cabecera*/
+header {
+    background-color: #1c1c1c; /*color de fondo*/
+    color: #f5f5f5; /*color del texto*/
+    display: flex; /*alinear elementos dentro del header*/
+    justify-content: space-between; /*distribucion de elementos*/
+    align-items: center; /*alinear elementos*/
+    padding: 10px 20px; /*espacio dentro de la cabecera*/
+    border-bottom: 2px solid #333; /*borde de abajo*/
+    position: fixed; /*para que al deslizar la page, el header quede fijo*/
+    top: 0; /*para que quede arriba*/
+    left: 0; /*alineado a la izq*/
+    width: 100%; /*para que ocupe todo el ancho*/
+    z-index: 1000; /*para que quede arriba del resto de la pagina (capa superior)*/
+}
+/*titulo principal adentro de la cabecera */
+header h1 {
+    margin: 0; /*no margen*/
+    font-size: 3em; /*tamaño txt*/
+    font-family: 'Marcellus', serif; /*aplico la fuente de google*/
+    font-weight: 400; /*peso de la fuente*/
+    white-space: nowrap; /*para que el txt quede en un solo renglon*/
+    color: #f5f5f5;
+}
+
+/*seccion inicio (home)*/
+#principal {
+    margin-bottom: 60px; /* espacio de abajo entre sections */
+    padding: 20px; /* espacio dentro */
+    background-color: #2c2c2c; /*color de fondo*/
+    border: 1px solid #444; /*bordecito alrededor*/
+    color: #e0e0e0; /*color txt*/
+    border-radius: 0; /*bordes rectos*/
+    text-align: center; /*txt al medio*/
+}
+
+/*parrafos en home*/
+#principal p {
+    margin: 0;
+    font-size: 1.2em; /*tamaño txt*/
+    line-height: 1.6; /*texto mas legible (mas separado)*/
+    color: #e0e0e0; /*colot txt*/
+}
+
+/*nav*/
+nav {
+    position: absolute; /* Posiciona el nav de manera absoluta (me arregló bugs visuales) */
+    right: 20px; /*alineado a la derecha*/
+    top: 50%; /*para que quede a la mitad de altura*/
+    transform: translateY(-50%); /* para que quede centrado respecto a la altura del mismo*/
+}
+/*lista de navegación (nav) */
+nav ul {
+    list-style: none; /*lista sin puntitos*/
+    display: flex; /* Lista en horizontal */
+    padding: 0; 
+    margin: 0; 
+}
+
+/*elementos de la lista de nav*/
+nav ul li {
+    margin-right: 15px; /*espacio entre elementos de la lista */
+}
+
+/*enlaces dentro de la lista de navegación */
+nav ul li a {
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    padding: 10px 15px; /*espacio para los links anclas*/
+    color: #d3d3d3; /*color del texto de los enlaces */
+    text-decoration: none; /*les saca el subrayadi*/
+    background-color: #2c2c2c; /*color de fondo de botones*/
+    border-radius: 0; /*bordes rectos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /*sombreado para los botones*/
+    font-family: 'Verdana', sans-serif; /*font*/
+    transition: background-color 0.3s, transform 0.3s; /*trnansiciones*/
+}
+
+/*al pasar el mouse sobre los enlaces */
+nav ul li a:hover {
+    background-color: #4a4a4a; /*color de fondo al pasar el mouse */
+    text-decoration: underline; /*subrayado al pasar el mouse por arriba*/
+    transform: scale(1.05); /*efecto de aumento*/
+}
+
+/*secciones principales (section) */
+section {
+    margin-top: 80px; /*espacio de arriba entre secciones*/
+    margin-bottom: 80px; /*espacio de abajo entre secciones */
+    padding: 20px; 
+    background-color: #2c2c2c; /*color de fondo*/
+    line-height: 1.5; /* mejora la legibilidad*/
+    border: 1px solid #444; /*bordecito alrededor de las secciones */
+    color: #e0e0e0; /* color del texto*/
+    border-radius: 0; /*bordes rectos */
+}
+
+/*títulos de las secciones */
+section h2 {
+    margin-bottom: 15px; 
+    font-size: 2.2em; /* tamaño font*/
+    color: #f0f0f0;
+    border-bottom: 1px solid #444; /*linea para que quede mas destacado*/
+    padding-bottom: 10px;
+}
+
+/*clase proyecto que en realidad es work*/
+.proyecto {
+    display: flex; /*alinear los elementos horizontalmente */
+    align-items: flex-start; /* alinea los elementos al principio en vertical*/
+    margin-bottom: 20px; 
+}
+
+/*tamaño de las imagen de wecode*/
+.proyecto img {
+    width: 200px; 
+    height: auto; 
+    margin-right: 15px; /* espacio a la derecha */
+}
+
+/*texto dentro de work*/
+.proyecto h3 {
+    font-size: 1.8em; /* tamaño del texto */
+    margin-bottom: 10px; /*espacio entre el subtítulo y el resto*/
+    color: #d3d3d3;
+}
+
+.proyecto p {
+    font-size: 1em; /* Ajusta el tamaño del texto */
+    line-height: 1.6; /* Mejora la legibilidad ajustando la altura de línea */
+    color: #d3d3d3; /* Color del texto */
+    margin: 0; /* Elimina el margen alrededor del párrafo */
+}
+
+/*iconos de redes */
+.social-icons {
+    display: flex; /*alinear los iconos horizontalmente */
+    gap: 15px; /*espacio entre los iconos */
+    justify-content: center; /*centrados horizontalmente*/
+    margin-top: 15px; /*espacio de arriba */
+}
+
+.social-icon img {
+    width: 35px; /*tamaño de los iconos */
+    height: 35px; /*tamaño de los iconos */
+    object-fit: contain; /* que no se deformen*/
+    transition: transform 0.3s ease; /*transicion al pasar el mouse */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* agranda el icono al pasar el mouse */
+}
