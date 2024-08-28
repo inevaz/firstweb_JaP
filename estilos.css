@@ -60,6 +60,8 @@ header h1 {
 
 /*nav*/
 nav {
+    display: flex;
+    justify-content: flex-end;
     position: absolute; /* Posiciona el nav de manera absoluta (me arregló bugs visuales) */
     right: 20px; /*alineado a la derecha*/
     top: 50%; /*para que quede a la mitad de altura*/
@@ -167,3 +169,37 @@ section h2 {
 .social-icon:hover img {
     transform: scale(1.1); /* agranda el icono al pasar el mouse */
 }
+
+/* Estilos para pantallas más pequeñas (menos de 768px de ancho) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del texto del header en pantallas más pequeñas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la navegación de horizontal a vertical */
+        position: fixed; /* Mantén la navegación fija */
+        top: 60px; /* Ajusta la posición para que esté justo debajo del header */
+        right: 0;
+        background-color: #1c1c1c; /* Fondo para el menú desplegable */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        text-align: center; /* Centra el texto de los enlaces */
+        padding: 10px 0; /* Espaciado para el menú */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espacio entre elementos de lista en navegación vertical */
+    }
+
+    .proyecto {
+        flex-direction: column; /* Cambia los elementos del proyecto a disposición vertical */
+        align-items: center; /* Centra los elementos en pantalla */
+    }
+
+    .proyecto img {
+        width: 100%; /* Ajusta la imagen al ancho del contenedor */
+        max-width: 300px; /* Establece un ancho máximo para que no sea demasiado grande */
+    }
+}
+
+
