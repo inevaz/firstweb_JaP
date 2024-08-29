@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ines Vaz | Student </title>
+    <title>Ines Vaz | Student</title>
     <link rel="stylesheet" href="estilos.css">
-  
-
 </head>
 <body>
     <header>
         <h1 class="pacifico-regular">ines vaz</h1>
+        <!-- Menú hamburguesa -->
+        <span class="menu-icon" onclick="toggleNav()">☰</span>
         <nav>
             <ul> 
                 <li><a href="#principal">Home</a></li>
@@ -25,7 +25,6 @@
         <h2>Hey! I'm Ines, and this is what I've been doing</h2>
         <p>This is a brief description of what I do in my everyday studying/working life</p>
     </section>
-    
 
     <section id="about-me">
         <h2>Education</h2>
@@ -49,17 +48,17 @@
             <img src="yowecode.png" alt="inesvazWeCode">
             <div>
                 <h3>business: wecode</h3>
-                <p><strong>Rol: Educator.</strong> I have been working for this company for 5 months. Skills acquired during this time working:
-                    <p>- Teach programming to children in schools.</p>
-                    <p>- Teach programming to children through private courses at the company headquarters.</p>
-                    <p>- Utilize Excel for managing lists and data.</p>
-                    <p>- Provide feedback on planning and project development within the company.</p>
-                    <p>- Conduct coordination meetings and other administrative tasks.</p>
-                </p>
+                <p><strong>Rol: Educator.</strong> I have been working for this company for 5 months. Skills acquired during this time working:</p>
+                <ul>
+                    <li>Teach programming to children in schools.</li>
+                    <li>Teach programming to children through private courses at the company headquarters.</li>
+                    <li>Utilize Excel for managing lists and data.</li>
+                    <li>Provide feedback on planning and project development within the company.</li>
+                    <li>Conduct coordination meetings and other administrative tasks.</li>
+                </ul>
             </div>
         </div>
     </section>
-    
 
     <section id="contact">
         <h2>Contact me</h2>
@@ -73,8 +72,15 @@
             </a>
             <a href="https://github.com/1nestable" target="_blank" class="social-icon">
                 <img src="github.png" alt="GitHub">
+            </a>
         </div>
     </section>
-    </section>  
+
+    <!-- JavaScript para alternar la visibilidad del menú -->
+    <script>
+        function toggleNav() {
+            document.body.classList.toggle('show-nav');
+        }
+    </script>
 </body>
 </html>
