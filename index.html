@@ -73,12 +73,16 @@
             </a>
         </div>
     </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const nav = document.querySelector('nav');
 
-    <!-- JavaScript para alternar la visibilidad del menú -->
-    <script>
-        function toggleNav() {
-            document.body.classList.toggle('show-nav');
-        }
-    </script>
+        menuIcon.addEventListener('click', function() {
+            nav.classList.toggle('show-nav'); // Alterna la clase 'show-nav' para mostrar/ocultar el menú
+        });
+    });
+</script>
+
 </body>
 </html>
