@@ -205,13 +205,18 @@ section h2 {
     }
 
     nav ul li {
-        margin-bottom: 5px; /* Espacio entre elementos */
+        margin: 0; /* Elimina margen extra */
     }
 
     nav ul li a {
-        padding: 15px; /* Ajusta el padding para los enlaces */
+        padding: 10px 0; /* Ajusta el padding para los enlaces */
         display: block; /* Los enlaces ocupan todo el ancho */
-        font-size: 1.2em; /* Ajusta el tamaño del texto para visibilidad */
+        font-size: 1em; /* Ajusta el tamaño del texto para visibilidad */
+        color: #d3d3d3; /* Color del texto del enlace */
+        background-color: #1c1c1c; /* Color de fondo del enlace */
+        border-bottom: 1px solid #333; /* Línea divisoria entre enlaces */
+        width: 100%; /* Los enlaces ocupan todo el ancho del contenedor */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     }
 
     /* Menú hamburguesa */
@@ -223,10 +228,13 @@ section h2 {
         position: absolute; /* Posiciona la hamburguesa en la esquina */
         top: 10px; /* Ajusta la posición */
         right: 20px; /* Ajusta la posición */
+        z-index: 1002; /* Asegura que el icono esté por encima del nav */
     }
 }
 
 /* Mostrar/ocultar menú con JavaScript */
 .show-nav nav {
-    display: block; /* Mostrar el nav al hacer clic en la hamburguesa */
+    display: flex; /* Mostrar el nav al hacer clic en la hamburguesa */
+    flex-direction: column; /* Asegura que los elementos del nav estén en columna */
+    align-items: center; /* Centra el contenido del nav */
 }
