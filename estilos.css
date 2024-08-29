@@ -188,6 +188,12 @@ section h2 {
         width: 100%; /* Asegura que nav ocupe todo el ancho */
         background-color: #1c1c1c; /* Fondo de nav para visibilidad */
         display: none; /* Inicialmente oculto para usar menú hamburguesa */
+        position: absolute; /* Posición absoluta para desplegar encima de otros contenidos */
+        top: 100%; /* Alinea el nav justo debajo del header */
+        left: 0; /* Alinea el nav con el borde izquierdo */
+        padding: 0; /* Elimina el padding extra */
+        box-sizing: border-box; /* Incluye el padding y borde en el ancho del nav */
+        z-index: 1001; /* Asegura que el menú nav esté por encima de otros elementos */
     }
 
     nav ul {
@@ -203,8 +209,9 @@ section h2 {
     }
 
     nav ul li a {
-        padding: 10px 0; /* Ajusta el padding para los enlaces */
+        padding: 15px; /* Ajusta el padding para los enlaces */
         display: block; /* Los enlaces ocupan todo el ancho */
+        font-size: 1.2em; /* Ajusta el tamaño del texto para visibilidad */
     }
 
     /* Menú hamburguesa */
@@ -221,7 +228,5 @@ section h2 {
 
 /* Mostrar/ocultar menú con JavaScript */
 .show-nav nav {
-    display: flex; /* Mostrar el nav al hacer clic en la hamburguesa */
+    display: block; /* Mostrar el nav al hacer clic en la hamburguesa */
 }
-
-
