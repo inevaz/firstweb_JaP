@@ -177,6 +177,7 @@ section h2 {
         display: flex;
         flex-direction: column; /* Alinea los elementos verticalmente */
         align-items: center; /* Centra el contenido del header */
+        position: relative; /* Asegura que el nav y el ícono de menú estén bien posicionados */
     }
 
     header h1 {
@@ -189,7 +190,7 @@ section h2 {
         background-color: #1c1c1c; /* Fondo de nav para visibilidad */
         display: none; /* Inicialmente oculto para usar menú hamburguesa */
         position: absolute; /* Posición absoluta para desplegar encima de otros contenidos */
-        top: 100%; /* Alinea el nav justo debajo del header */
+        top: 50px; /* Ajusta la posición para estar justo debajo del header */
         left: 0; /* Alinea el nav con el borde izquierdo */
         padding: 0; /* Elimina el padding extra */
         box-sizing: border-box; /* Incluye el padding y borde en el ancho del nav */
@@ -233,7 +234,7 @@ section h2 {
 }
 
 /* Mostrar/ocultar menú con JavaScript */
-.show-nav nav {
+.show-nav {
     display: flex; /* Mostrar el nav al hacer clic en la hamburguesa */
     flex-direction: column; /* Asegura que los elementos del nav estén en columna */
     align-items: center; /* Centra el contenido del nav */
