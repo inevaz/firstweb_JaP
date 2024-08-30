@@ -174,57 +174,74 @@ section h2 {
 @media screen and (max-width: 768px) {
     header {
         padding: 10px; /* Reduce el padding del header */
+        display: flex;
         flex-direction: column; /* Alinea los elementos verticalmente */
         align-items: center; /* Centra el contenido del header */
+        position: relative; /* Asegura que el nav y el ícono de menú estén bien posicionados */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Reduce el tamaño del texto del header */
+        margin-bottom: 10px; /* Añade un pequeño margen inferior */
     }
 
     nav {
         width: 100%; /* Asegura que nav ocupe todo el ancho */
-        background-color: #1c1c1c; /* Fondo para visibilidad */
-        display: none; /* Inicialmente oculto para usar el menú hamburguesa */
+        background-color: #1c1c1c; /* Fondo de nav para visibilidad */
+        display: none; /* Inicialmente oculto para usar menú hamburguesa */
         position: absolute; /* Posición absoluta para desplegar encima de otros contenidos */
         top: 50px; /* Ajusta la posición para estar justo debajo del header */
         left: 0; /* Alinea el nav con el borde izquierdo */
         padding: 0; /* Elimina el padding extra */
         box-sizing: border-box; /* Incluye el padding y borde en el ancho del nav */
         z-index: 1001; /* Asegura que el menú nav esté por encima de otros elementos */
+        flex-direction: column; /* Lista en columna */
+        text-align: center; /* Centra los elementos de la lista */
+    }
+
+    nav.show-nav {
+        display: flex; /* Mostrar el nav al hacer clic en la hamburguesa */
     }
 
     nav ul {
         flex-direction: column; /* Lista en columna */
-        width: 100%; /* Ancho completo para la lista */
+        width: 100%;
+        padding: 0;
+        margin: 0;
         text-align: center; /* Centra los elementos de la lista */
     }
 
     nav ul li {
         margin: 0; /* Elimina margen extra */
-        width: 100%; /* Ancho completo para los elementos de la lista */
     }
 
     nav ul li a {
-        padding: 15px 0; /* Aumenta el padding vertical para facilitar el clic */
-        display: block; /* Asegura que los enlaces ocupen todo el ancho */
-        font-size: 1.2em; /* Ajusta el tamaño del texto para visibilidad */
+        padding: 10px 0; /* Ajusta el padding para los enlaces */
+        display: block; /* Los enlaces ocupan todo el ancho */
+        font-size: 1em; /* Ajusta el tamaño del texto para visibilidad */
         color: #d3d3d3; /* Color del texto del enlace */
         background-color: #1c1c1c; /* Color de fondo del enlace */
         border-bottom: 1px solid #333; /* Línea divisoria entre enlaces */
+        width: 100%; /* Los enlaces ocupan todo el ancho del contenedor */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     }
 
+    /* Menú hamburguesa */
     .menu-icon {
-        display: block; /* Muestra el ícono en móviles */
-        cursor: pointer; /* Cursor de puntero para el ícono */
-        font-size: 1.5em; /* Tamaño del ícono de la hamburguesa */
-        color: #f5f5f5; /* Color del ícono */
-        position: absolute; /* Posiciona el ícono */
-        top: 10px; /* Posición desde arriba */
-        right: 20px; /* Posición desde la derecha */
-        z-index: 1002; /* Asegura que el ícono esté por encima del nav */
+        display: block; /* Mostrar ícono en móviles */
+        cursor: pointer; /* Cursor de puntero para la hamburguesa */
+        font-size: 1.5em; /* Tamaño del icono de la hamburguesa */
+        color: #f5f5f5; /* Color del icono */
+        position: absolute; /* Posiciona la hamburguesa en la esquina */
+        top: 10px; /* Ajusta la posición */
+        right: 20px; /* Ajusta la posición */
+        z-index: 1002; /* Asegura que el icono esté por encima del nav */
     }
+}
 
-    /* Clase para mostrar navegación al hacer clic */
-    .show-nav {
-        display: flex; /* Muestra el nav al hacer clic en la hamburguesa */
-        flex-direction: column; /* Asegura que los elementos del nav estén en columna */
-        align-items: center; /* Centra el contenido del nav */
-    }
+/* Mostrar/ocultar menú con JavaScript */
+.show-nav {
+    display: flex; /* Mostrar el nav al hacer clic en la hamburguesa */
+    flex-direction: column; /* Asegura que los elementos del nav estén en columna */
+    align-items: center; /* Centra el contenido del nav */
 }
